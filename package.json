@@ -1,0 +1,44 @@
+{
+  "name": "vs",
+  "version": "1.1.1",
+  "description": "blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luguizhou/VShared1.0.git"
+  },
+  "keywords": [
+    "a1511466"
+  ],
+  "author": "strom,jartto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luguizhou/VShared1.0/issues"
+  },
+  "homepage": "https://github.com/luguizhou/VShared1.0#readme",
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "error-inject": "^1.0.0"
+  },
+  "dependencies": {
+   "art-template": "*",
+    "body-parser": "^1.13.3",
+    "busboy": "^0.2.11",
+    "co-busboy": "^1.3.0",
+    "koa": "*",
+    "koa-bodyparser": "^2.0.1",
+    "koa-redisy": "0.0.7",
+    "koa-router": "*",
+    "koa-send": "*",
+    "koa-static": "*",
+    "koa-swig": "*",
+    "node-inspector": "*",
+    "node-snowflake": "0.0.1",
+    "qrcode-npm": "*",
+    "ron": "*",
+    "ueditor": "^1.1.1"
+  }
+}

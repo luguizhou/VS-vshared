@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>微晒网</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=2.2.0" rel="stylesheet">
+
+</head>
+
+<body ng-app="ManageApp">
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Beaut-zihan</strong>
+                             </span> <span class="text-muted text-xs block">超级管理员 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="form_avatar.html">修改头像</a>
+                                </li>
+                                <li><a href="profile.html">个人资料</a>
+                                </li>
+                                <li><a href="contacts.html">联系我们</a>
+                                </li>
+                                <li><a href="mailbox.html">信箱</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            H+
+                        </div>
+
+                    </li>
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">主页</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="index_templet.html?t=1">新建模板</a>
+                            </li>
+                            <li><a href="index.html">模板管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="index.html#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message"><a href="index.html" title="返回首页"><i class="fa fa-home"></i></a>欢迎使用H+后台主题</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小四</strong> 项目已处理完结
+                                            <br>
+                                            <small class="text-muted">3天前 2014.11.8</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">25小时前</small>
+                                            <strong>国民岳父</strong> 这是一条测试信息
+                                            <br>
+                                            <small class="text-muted">昨天</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                            <span class="pull-right text-muted small">4分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                            <span class="pull-right text-muted small">12分钟钱</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>查看所有 </strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row  border-bottom white-bg dashboard-header">
+				<link href="./css/style_qrcode.css" type="text/css" rel="stylesheet">
+					<div ng-controller="qcodetemplet">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="username" class="col-sm-2 control-label">模板名称</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="templetname" ng-model="templet.name" placeholder="模板名称">
+								</div>
+							</div>
+							
+						</form>
+						<div role="tabpanel" class="col-md-11 col-md-offset-1 templet_qrcode">
+
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs uma-tab" role="tablist">
+								<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">模板一</a>
+								</li>
+								<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">模板二</a>
+								</li>
+								<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">模板三</a>
+								</li>
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active m-t-10" id="home">
+									<div class="col-sm-7">
+										<div class="form-horizontal">
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label">模板内容</label>
+												<div class="col-sm-10">
+												<input type="hidden" ng-model="templet.content" />
+													<script id="templet1_content" name="content" type="text/plain">
+													</script>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label"></label>
+												<div class="col-sm-10">
+													<a class="btn btn-danger btn-saved" ng-click="saveQrcodeTemplet()">保存</a>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-sm-5">
+										<div class="center-block mobileDiv">
+											<div class="content">
+												<div data-content="templet1_content">
+													test
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div role="tabpanel" class="tab-pane m-t-10" id="profile">
+									<div class="col-sm-7">
+										<div class="form-horizontal">
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label">绑定条件</label>
+												<div class="col-sm-10">
+													<input type="email" class="form-control" id="inputEmail3" placeholder="1+1">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label">更换图片</label>
+												<div class="col-sm-10">
+													<div class="picBox text-center">
+														<h6 class="m-t-10 font-size-12">提示：多文件请使用企业码，最大允许2M</h6>
+														<p>
+															<!--<a class="m-t-10 btn-choose">选择照片</a>-->
+														<form action="" method="post" enctype="multipart/form-data">
+															<input type="file"  id="file" name="file" />
+															<!--<button type="button" id="buttonUpload" onclick="return ajaxFileUpload();">上传</button>-->
+														</form>
+
+														<div id="photo-upload" style="display: none;">
+															<!--<div class="updiv" id="updiv"></div>-->
+															<div id="imgdiv">
+																<img id="imgShow" alt="[Jcrop Example]" /><span>原图</span>
+															</div>
+
+															<div id="preview-pane">
+																<div class="preview-container">
+																	<img class="jcrop-preview" />
+																</div>
+																<span>预览效果</span>
+															</div>
+															<div class="upload">
+																<input type="button" value="上传图片" class="blueButton " onclick="jcropsave();" />
+															</div>
+														</div>
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label">产品名称</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入产品名字">
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label">产品特点</label>
+												<script id="product_feature" name="content" type="text/plain">
+												</script>
+											</div>
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label">使用说明</label>
+												<script id="product_description" name="content" type="text/plain">
+												</script>
+											</div>
+
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label">区域</label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control" id="inputPassword3" placeholder=" ">
+												</div>
+												<label for="inputPassword3" class="col-sm-2 control-label">选择区域</label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control" id="exampleInputEmail2" placeholder="请输入产品名称">
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label">区域</label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control" id="examplestyle" placeholder="请输入产品型号">
+												</div>
+												<label for="inputPassword3" class="col-sm-2 control-label">选择区域</label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control" id="examplepici" placeholder="请输入产品批次">
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-sm-5">
+										<div class="active_present_content">
+											<div class="content_present">
+												<div class="main" id="content">
+													<div class="present_wraper">
+														<div id="type_imgtext_content" class="type_content_show">
+															<img src="img/showactiveimg.png" id="imgtext_content"><span class="img_title"></span>
+
+															<div class="type_content_des"><span class="active_show_des"></span>
+															</div>
+														</div>
+														<div class="type_content_show mobile_show">
+															<div class="topTitle" id="topTitle"></div>
+															<div class="contant">
+																<h5 class="title"><span>产品特点</span></h5>
+
+																<p id="product_style">
+
+																</p>
+																<h5 class="title"><span>使用方法</span></h5>
+
+																<p id="use_method"></p>
+
+																<figure class="figureImg">
+																	<img src="img/content-img.png" data-rel="images/content-img.png" alt=" " />
+																</figure>
+															</div>
+														</div>
+														<div class="row" style="margin-bottom:95px">
+
+															<div class="accordion-group">
+																<div class="accordion-heading border-b">
+																	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+
+																		追溯检查
+
+																	</a>
+																	<span><i class="glyphicon glyphicon-chevron-down"> </i></span>
+																</div>
+																<div id="collapseOne" class="accordion-body">
+																	<div class="am-accordion-content">
+																		<p><span class="lable">名称：</span><span id="name"></span>
+																		</p>
+																		<p><span class="lable">型号：</span><span id="style_name"></span>
+																		</p>
+																		<p><span class="lable">销售区域：</span><span id="sale_place">北京</span>
+																		</p>
+																		<p><span class="lable">客户：</span><span id="customer"></span>
+																		</p>
+																		<p><span class="lable">批次：</span><span id="pici"></span>
+																		</p>
+																	</div>
+																</div>
+															</div>
+
+															<div class="accordion-group">
+																<div class="accordion-heading border-b">
+																	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+
+																		防窜检查
+
+																	</a>
+																</div>
+																<div id="collapseTwo" class="accordion-body collapse" style="height: 0; ">
+																	<div class="am-accordion-content">
+																		<p><span class="lable">名称：</span><span id="name1"></span>
+																		</p>
+																		<p><span class="lable">型号：</span><span id="style_name1"></span>
+																		</p>
+																		<p><span class="lable">销售区域：</span><span id="sale_place1">北京</span>
+																		</p>
+																		<p><span class="lable">客户：</span><span id="customer1"></span>
+																		</p>
+																		<p><span class="lable">批次：</span><span id="pici1"></span>
+																		</p>
+																	</div>
+																</div>
+															</div>
+															<div class="accordion-group ">
+																<div class="accordion-heading border-b">
+																	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+
+																		厂家链接
+
+																	</a>
+																</div>
+																<div id="collapseThree" class="accordion-body collapse" style="height: 0; ">
+																	<div class="am-accordion-content">
+																		<p><span class="lable">名称：</span><span id="name2"></span>
+																		</p>
+																		<p><span class="lable">型号：</span><span id="style_name2"></span>
+																		</p>
+																		<p><span class="lable">销售区域：</span><span id="sale_place2">北京</span>
+																		</p>
+																		<p><span class="lable">客户：</span><span id="customer2"></span>
+																		</p>
+																		<p><span class="lable">批次：</span><span id="pici2"></span>
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12 text-center m-b-10">
+										<a class="btn btn-danger btn-saved">保存</a>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane  m-t-10" id="messages">模板三</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			<div class="footer">
+			<div class="pull-right">
+				By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+			</div>
+			<div>
+				<strong>Copyright</strong> H+ &copy; 2014
+			</div>
+		</div>
+
+		</div>
+            </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/hplus.js?v=2.2.0"></script>
+	 <script src="../../angularjs/angular.min.js"></script>
+	 <link href="../../ueditor/themes/default/css/ueditor.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="../../ueditor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="../../ueditor/ueditor.all.js"></script>
+	 <script src="js/qrcode_app.js"></script>
+    <!--统计代码，可删除-->
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+﻿<div ng-controller="qcodeuser">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="username" class="col-sm-2 control-label">码用户名称</label>
+			<div class="col-sm-10">
+				<input type="hidden" ng-model="user.id" />
+				<input type="text" class="form-control" ng-model="user.name" placeholder="码用户名称">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="username" class="col-sm-2 control-label">移动电话</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="user.phone" placeholder="移动电话">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="username" class="col-sm-2 control-label">固定电话</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="user.tel" placeholder="固定电话">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="username" class="col-sm-2 control-label">地址</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="user.address" placeholder="地址">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary" ng-click="saveQrcodeUser()">保存</button>
+			</div>
+		</div>
+	</form>
+	<script src="./qrcode/qcodeuser.js" type="text/javascript"></script>
+
+</div>

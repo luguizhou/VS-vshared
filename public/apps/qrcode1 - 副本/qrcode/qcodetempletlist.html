@@ -1,0 +1,39 @@
+﻿<div ng-controller="qcodetempletlist" style="min-height:400px;">
+
+
+	<button type="button" class="btn btn-primary btn-lg" style="margin: 15px;"  ng-click="editeClick('')">
+		新增模板
+	</button>
+	<table class="table table-bordered table-hover">
+		<thead>
+		<tr>
+			<th>模板编号</th>
+			<th>模板标题</th>
+			<th>二维码</th>
+			<th>操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="item in source">
+			<th scope="row">
+				<code ng-bind="item.id">item</code>
+			</th>
+			<th scope="row">
+				<code ng-bind="item.name">name</code>
+			</th>
+			<td ><strong ><a ng-click="showqrcode(item.id)">qrcode</a></strong></td>
+			<td>
+				<button type="button" class="btn" ng-click="editeClick(item)">
+					修改
+				</button>
+				<button type="button" class="btn" ng-click="deleteClick(item)">
+					删除
+				</button></td>
+		</tr>
+
+		</tbody>
+	</table>
+
+	<script src="./qrcode/qcodetempletlist.js" type="text/javascript"></script>
+
+</div>
